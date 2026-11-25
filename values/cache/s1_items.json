@@ -1,0 +1,130 @@
+{
+  "event_name": "Assam flood 2022 (Silchar)",
+  "onset_date": "2022-06-15",
+  "aoi_bbox": [
+    92.65,
+    24.7,
+    92.95,
+    24.95
+  ],
+  "coverage_threshold": 0.8,
+  "items": [
+    {
+      "id": "S1A_IW_GRDH_1SDV_20220523T115643_20220523T115708_043338_052CDF_rtc",
+      "collection": "sentinel-1-rtc",
+      "datetime": "2022-05-23T11:56:55.974380Z",
+      "orbit_direction": "ascending",
+      "relative_orbit": 41,
+      "platform": "SENTINEL-1A",
+      "aoi_coverage": 1.0,
+      "assets": {
+        "vh": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/5/23/IW/DV/S1A_IW_GRDH_1SDV_20220523T115643_20220523T115708_043338_052CDF_38FC/measurement/iw-vh.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D",
+        "vv": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/5/23/IW/DV/S1A_IW_GRDH_1SDV_20220523T115643_20220523T115708_043338_052CDF_38FC/measurement/iw-vv.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D"
+      }
+    },
+    {
+      "id": "S1A_IW_GRDH_1SDV_20220525T234741_20220525T234806_043374_052DFA_rtc",
+      "collection": "sentinel-1-rtc",
+      "datetime": "2022-05-25T23:47:53.922114Z",
+      "orbit_direction": "descending",
+      "relative_orbit": 77,
+      "platform": "SENTINEL-1A",
+      "aoi_coverage": 1.0,
+      "assets": {
+        "vh": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/5/25/IW/DV/S1A_IW_GRDH_1SDV_20220525T234741_20220525T234806_043374_052DFA_89F2/measurement/iw-vh.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D",
+        "vv": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/5/25/IW/DV/S1A_IW_GRDH_1SDV_20220525T234741_20220525T234806_043374_052DFA_89F2/measurement/iw-vv.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D"
+      }
+    },
+    {
+      "id": "S1A_IW_GRDH_1SDV_20220604T115644_20220604T115709_043513_053205_rtc",
+      "collection": "sentinel-1-rtc",
+      "datetime": "2022-06-04T11:56:57.212216Z",
+      "orbit_direction": "ascending",
+      "relative_orbit": 41,
+      "platform": "SENTINEL-1A",
+      "aoi_coverage": 1.0,
+      "assets": {
+        "vh": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/4/IW/DV/S1A_IW_GRDH_1SDV_20220604T115644_20220604T115709_043513_053205_F404/measurement/iw-vh.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D",
+        "vv": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/4/IW/DV/S1A_IW_GRDH_1SDV_20220604T115644_20220604T115709_043513_053205_F404/measurement/iw-vv.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D"
+      }
+    },
+    {
+      "id": "S1A_IW_GRDH_1SDV_20220606T234742_20220606T234807_043549_05332B_rtc",
+      "collection": "sentinel-1-rtc",
+      "datetime": "2022-06-06T23:47:55.411795Z",
+      "orbit_direction": "descending",
+      "relative_orbit": 77,
+      "platform": "SENTINEL-1A",
+      "aoi_coverage": 1.0,
+      "assets": {
+        "vh": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/6/IW/DV/S1A_IW_GRDH_1SDV_20220606T234742_20220606T234807_043549_05332B_D43B/measurement/iw-vh.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D",
+        "vv": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/6/IW/DV/S1A_IW_GRDH_1SDV_20220606T234742_20220606T234807_043549_05332B_D43B/measurement/iw-vv.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D"
+      }
+    },
+    {
+      "id": "S1A_IW_GRDH_1SDV_20220616T115645_20220616T115710_043688_05373A_rtc",
+      "collection": "sentinel-1-rtc",
+      "datetime": "2022-06-16T11:56:57.623033Z",
+      "orbit_direction": "ascending",
+      "relative_orbit": 41,
+      "platform": "SENTINEL-1A",
+      "aoi_coverage": 1.0,
+      "assets": {
+        "vh": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/16/IW/DV/S1A_IW_GRDH_1SDV_20220616T115645_20220616T115710_043688_05373A_DFAB/measurement/iw-vh.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D",
+        "vv": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/16/IW/DV/S1A_IW_GRDH_1SDV_20220616T115645_20220616T115710_043688_05373A_DFAB/measurement/iw-vv.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D"
+      }
+    },
+    {
+      "id": "S1A_IW_GRDH_1SDV_20220618T234743_20220618T234808_043724_05385D_rtc",
+      "collection": "sentinel-1-rtc",
+      "datetime": "2022-06-18T23:47:55.952722Z",
+      "orbit_direction": "descending",
+      "relative_orbit": 77,
+      "platform": "SENTINEL-1A",
+      "aoi_coverage": 1.0,
+      "assets": {
+        "vh": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/18/IW/DV/S1A_IW_GRDH_1SDV_20220618T234743_20220618T234808_043724_05385D_E87E/measurement/iw-vh.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D",
+        "vv": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/18/IW/DV/S1A_IW_GRDH_1SDV_20220618T234743_20220618T234808_043724_05385D_E87E/measurement/iw-vv.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D"
+      }
+    },
+    {
+      "id": "S1A_IW_GRDH_1SDV_20220628T115646_20220628T115711_043863_053C7E_rtc",
+      "collection": "sentinel-1-rtc",
+      "datetime": "2022-06-28T11:56:58.605871Z",
+      "orbit_direction": "ascending",
+      "relative_orbit": 41,
+      "platform": "SENTINEL-1A",
+      "aoi_coverage": 1.0,
+      "assets": {
+        "vh": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/28/IW/DV/S1A_IW_GRDH_1SDV_20220628T115646_20220628T115711_043863_053C7E_7C9A/measurement/iw-vh.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D",
+        "vv": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/28/IW/DV/S1A_IW_GRDH_1SDV_20220628T115646_20220628T115711_043863_053C7E_7C9A/measurement/iw-vv.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D"
+      }
+    },
+    {
+      "id": "S1A_IW_GRDH_1SDV_20220630T234744_20220630T234809_043899_053D9A_rtc",
+      "collection": "sentinel-1-rtc",
+      "datetime": "2022-06-30T23:47:56.687919Z",
+      "orbit_direction": "descending",
+      "relative_orbit": 77,
+      "platform": "SENTINEL-1A",
+      "aoi_coverage": 1.0,
+      "assets": {
+        "vh": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/30/IW/DV/S1A_IW_GRDH_1SDV_20220630T234744_20220630T234809_043899_053D9A_3654/measurement/iw-vh.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D",
+        "vv": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/6/30/IW/DV/S1A_IW_GRDH_1SDV_20220630T234744_20220630T234809_043899_053D9A_3654/measurement/iw-vv.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D"
+      }
+    },
+    {
+      "id": "S1A_IW_GRDH_1SDV_20220712T234744_20220712T234809_044074_0542D1_rtc",
+      "collection": "sentinel-1-rtc",
+      "datetime": "2022-07-12T23:47:57.326973Z",
+      "orbit_direction": "descending",
+      "relative_orbit": 77,
+      "platform": "SENTINEL-1A",
+      "aoi_coverage": 1.0,
+      "assets": {
+        "vh": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/7/12/IW/DV/S1A_IW_GRDH_1SDV_20220712T234744_20220712T234809_044074_0542D1_C27A/measurement/iw-vh.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D",
+        "vv": "https://sentinel1euwestrtc.blob.core.windows.net/sentinel1-grd-rtc/GRD/2022/7/12/IW/DV/S1A_IW_GRDH_1SDV_20220712T234744_20220712T234809_044074_0542D1_C27A/measurement/iw-vv.rtc.tiff?st=2026-11-24T18%3A09%3A35Z&se=2026-11-25T18%3A54%3A35Z&sp=rl&sv=2025-07-05&sr=c&skoid=9c8ff44a-6a2c-4dfb-b298-1c9212f64d9a&sktid=72f988bf-86f1-41af-91ab-2d7cd011db47&skt=2026-11-25T08%3A19%3A56Z&ske=2026-12-02T08%3A19%3A56Z&sks=b&skv=2025-07-05&sig=KHPt%2BJVR3njFlJWKHj9jTBJsGuSH/ireQy7OVZ/4/wY%3D"
+      }
+    }
+  ]
+}
