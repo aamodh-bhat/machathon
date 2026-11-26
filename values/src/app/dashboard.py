@@ -1,5 +1,5 @@
 """
-FloodLedger — Pitch-Ready Offline Dashboard (Part A + Part B).
+FloodLedger — Clean, Flush-Aligned Offline Pitch Dashboard (Part A + Part B).
 Reads ONLY from cache/ and config.yaml. Zero live API calls.
 Run: streamlit run src/app/dashboard.py
 """
@@ -26,37 +26,100 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    /* Cleanly centered layout without CSS zoom breaking alignment */
     .block-container {
-        max-width: 1180px;
-        margin: 0 auto;
-        padding-top: 2rem;
-        padding-bottom: 3rem;
+        max-width: 1180px !important;
+        margin: 0 auto !important;
+        padding-top: 3.75rem !important;
+        padding-bottom: 3rem !important;
+        zoom : 2;
     }
+
+    /* Neat top website header bar */
+    .top-navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        padding: 0.8rem 1.3rem;
+        background-color: #0e1420;
+        border: 1px solid #1e293b;
+        border-radius: 10px;
+        margin-bottom: 1.2rem;
+    }
+    .brand-group {
+        display: flex;
+        align-items: baseline;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+    }
+    .brand-logo {
+        font-size: 1.45rem !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        letter-spacing: -0.3px;
+    }
+    .brand-tag {
+        font-size: 0.95rem !important;
+        color: #94a3b8 !important;
+        font-weight: 500;
+    }
+    .nav-badges {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+    }
+    .nav-pill {
+        font-size: 0.86rem !important;
+        color: #cbd5e1 !important;
+        background-color: #161f30;
+        border: 1px solid #263248;
+        padding: 0.28rem 0.75rem;
+        border-radius: 999px;
+        font-weight: 500;
+    }
+    .nav-pill-live {
+        font-size: 0.86rem !important;
+        color: #34d399 !important;
+        background-color: rgba(16, 185, 129, 0.12);
+        border: 1px solid rgba(16, 185, 129, 0.35);
+        padding: 0.28rem 0.75rem;
+        border-radius: 999px;
+        font-weight: 600;
+    }
+
+    /* Readable typography */
     html, body, [class*="css"] {
-        font-size: 17px;
+        font-size: 16px;
     }
     .stMarkdown p, .stMarkdown li {
-        font-size: 1.06rem !important;
+        font-size: 1.04rem !important;
         line-height: 1.6 !important;
     }
+
+    /* Hero banner */
     .hero-banner {
         background: linear-gradient(90deg, #0b132b 0%, #1c2541 100%);
         border-left: 6px solid #00b4d8;
-        padding: 1.4rem 1.8rem;
+        padding: 1.35rem 1.7rem;
         border-radius: 10px;
-        margin-bottom: 1.4rem;
+        margin-bottom: 1.25rem;
     }
     .hero-title {
-        font-size: 2.1rem !important;
+        font-size: 2.05rem !important;
         font-weight: 700 !important;
         color: #ffffff !important;
         line-height: 1.3 !important;
-        margin-bottom: 0.4rem !important;
+        margin-bottom: 0.35rem !important;
     }
     .hero-sub {
-        font-size: 1.02rem !important;
+        font-size: 1.0rem !important;
         color: #cbd5e1 !important;
     }
+
+    /* KPI metric cards */
     div[data-testid="stMetric"] {
         background-color: #131926;
         border: 1px solid #263248;
@@ -64,16 +127,51 @@ st.markdown(
         padding: 1rem 1.2rem;
     }
     div[data-testid="stMetricLabel"] p {
-        font-size: 0.98rem !important;
+        font-size: 0.96rem !important;
         color: #94a3b8 !important;
     }
     div[data-testid="stMetricValue"] {
-        font-size: 2.0rem !important;
+        font-size: 1.95rem !important;
         font-weight: 700 !important;
     }
+
+    /* Clear tab headers */
     button[data-baseweb="tab"] p {
-        font-size: 1.1rem !important;
+        font-size: 1.08rem !important;
         font-weight: 600 !important;
+    }
+
+    div[data-testid="stPlotlyChart"] {
+    zoom: 0.69;}
+
+    /* Flush-aligned HTML tables (never overflow or clip) */
+    div[data-testid="stTable"] {
+        width: 100% !important;
+    }
+    div[data-testid="stTable"] table {
+        width: 100% !important;
+        border-collapse: collapse;
+        background-color: #131926;
+        border: 1px solid #263248;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    div[data-testid="stTable"] th {
+        background-color: #182133 !important;
+        color: #94a3b8 !important;
+        font-weight: 600 !important;
+        text-align: left !important;
+        padding: 0.7rem 0.95rem !important;
+        border-bottom: 1px solid #263248 !important;
+        font-size: 0.95rem !important;
+    }
+    div[data-testid="stTable"] td {
+        padding: 0.7rem 0.95rem !important;
+        border-bottom: 1px solid #1e293b !important;
+        font-size: 0.96rem !important;
+        color: #f1f5f9 !important;
+        text-align: left !important;
     }
     </style>
     """,
@@ -164,6 +262,26 @@ with st.sidebar:
     events_per_year = st.slider("Flood Events / Year", 1, 10, int(cfg["whatif"].get("events_per_year", 2)), 1)
 
 # ==============================================================================
+# TOP WEBSITE HEADER BAR
+# ==============================================================================
+st.markdown(
+    f"""
+    <div class="top-navbar">
+        <div class="brand-group">
+            <span class="brand-logo">🛰️ FloodLedger</span>
+            <span class="brand-tag">Orbit-to-Economy Disaster Intelligence</span>
+        </div>
+        <div class="nav-badges">
+            <span class="nav-pill">📍 {cfg['event']['name']}</span>
+            <span class="nav-pill">Sentinel-1 SAR + AI</span>
+            <span class="nav-pill-live">● Offline Cache Ready</span>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+# ==============================================================================
 # HEADLINE BANNER & 4 KPI CARDS
 # ==============================================================================
 st.markdown(
@@ -174,7 +292,7 @@ st.markdown(
             The flood caused <span style="color:#00b4d8;">₹ {total_loss_cr:.2f} crore</span> of damage.
         </div>
         <div class="hero-sub">
-            FloodLedger &nbsp;•&nbsp; {cfg['event']['name']} (Onset: {cfg['event']['onset_date']}) &nbsp;•&nbsp; Real Sentinel-1 Radar + AI
+            Flood Onset: {cfg['event']['onset_date']} &nbsp;•&nbsp; Cloud-Penetrating Radar Mapping &nbsp;•&nbsp; Economic Loss &amp; Onboard-AI Assessment
         </div>
     </div>
     """,
@@ -228,15 +346,13 @@ with tab1:
     with info_col:
         st.subheader("Where the Damage Happened")
         exp_rf, loss_rf = exposure["rf"], loss["rf"]
-        st.dataframe(
+        st.table(
             pd.DataFrame([
-                {"Land Type": "Cropland", "Flooded (ha)": exp_rf["cropland_ha"], "Loss (₹ cr)": loss_rf["crop_loss_crore"]},
-                {"Land Type": "Built-up", "Flooded (ha)": exp_rf["builtup_ha"], "Loss (₹ cr)": loss_rf["built_loss_crore"]},
-                {"Land Type": "Other", "Flooded (ha)": exp_rf["other_ha"], "Loss (₹ cr)": 0.0},
-                {"Land Type": "TOTAL", "Flooded (ha)": exp_rf["total_flooded_ha"], "Loss (₹ cr)": loss_rf["total_loss_crore"]},
-            ]),
-            use_container_width=True,
-            hide_index=True,
+                {"Land Type": "Cropland", "Flooded (ha)": f"{exp_rf['cropland_ha']:,.2f}", "Loss (₹ cr)": f"{loss_rf['crop_loss_crore']:.2f}"},
+                {"Land Type": "Built-up", "Flooded (ha)": f"{exp_rf['builtup_ha']:,.2f}", "Loss (₹ cr)": f"{loss_rf['built_loss_crore']:.2f}"},
+                {"Land Type": "Other", "Flooded (ha)": f"{exp_rf['other_ha']:,.2f}", "Loss (₹ cr)": "0.00"},
+                {"Land Type": "TOTAL", "Flooded (ha)": f"{exp_rf['total_flooded_ha']:,.2f}", "Loss (₹ cr)": f"{loss_rf['total_loss_crore']:.2f}"},
+            ])
         )
         st.info(
             "**Two honest caveats:**\n"
@@ -267,57 +383,45 @@ with tab2:
         ]
 
         fig = go.Figure()
-        fig.add_trace(go.Scatter(x=days, y=total_wait_cr, mode="lines+markers", name="Cumulative Cost (₹ cr)", line=dict(color="#00b4d8", width=3)))
-        fig.add_vline(x=n_days, line_dash="dash", line_color="#ff9f1c", annotation_text=f"Observed ({n_days}d)")
-        fig.add_vline(x=window_hrs / 24.0, line_dash="dot", line_color="#ef476f", annotation_text=f"{window_hrs}h Window")
-        fig.update_layout(
-            xaxis_title="Days After Flood Onset",
-            yaxis_title="Cumulative Cost (₹ crore)",
-            height=330,
-            margin=dict(l=10, r=10, t=25, b=10),
-            font=dict(size=14),
+        fig.add_trace(
+            go.Scatter(
+                x=days,
+                y=total_wait_cr,
+                mode="lines+markers",
+                name="Cumulative Cost (₹ cr)",
+                line=dict(color="#00b4d8", width=3),
+            )
         )
-        st.plotly_chart(fig, use_container_width=True)
-
-        if n_days > (window_hrs / 24.0):
-            at_risk_cr = draft_claim_inr * float(dc_cfg["share_claims_at_risk_if_late"]) / 1e7
-            st.warning(f"Satellite wait (**{n_days}d**) missed the **{window_hrs}h** insurance window → **₹ {at_risk_cr:.2f} cr** in claims at risk.")
-        else:
-            st.success(f"Satellite wait (**{n_days}d**) was inside the **{window_hrs}h** insurance reporting window.")
-
-    with col_right:
-        st.subheader(f"Is Faster Tech Worth It? ({events_per_year} floods/yr)")
-        st.caption("How much must 1 day of delay cost for each faster layer to pay for itself? *(Adjust assumptions in sidebar `>`)*")
-
-        label_map = {
-            "satellite_only": "Free Satellite Only (Baseline)",
-            "commercial_sar": "+ Commercial SAR Satellite",
-            "haps_sar": "+ HAPS Radar Aircraft",
-            "drone_verify": "+ Drone Claim Verification",
-        }
-        rows = []
-        for name, c in cfg["whatif"]["configs"].items():
-            raw_gap = c["gap_days"]
-            g_days = n_days if str(raw_gap).upper() == "FROM_M5" else float(raw_gap)
-            ann_cost = float(c["annual_cost_inr"])
-            saved = max(0.0, n_days - g_days)
-            be = (ann_cost / (events_per_year * saved)) if (saved > 0 and ann_cost > 0) else None
-            worth_it = "Yes" if (be is not None and daily_wait_cost_inr >= be) else ("No" if be is not None else "Baseline")
-
-            rows.append({
-                "Sensing Option": label_map.get(name, name),
-                "Wait (days)": round(g_days, 1),
-                "Breakeven": f"₹ {be / 1e5:.1f} L/day" if be is not None else "—",
-                "Pays Off?": worth_it,
-            })
-
-        st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+        fig.add_vline(
+            x=n_days,
+            line_dash="dash",
+            line_color="#ff9f1c",
+            annotation_text=f"Observed ({n_days}d)",
+            annotation_position="top left",
+        )
+        fig.add_vline(
+            x=window_hrs / 24.0,
+            line_dash="dot",
+            line_color="#ef476f",
+            annotation_text=f"{window_hrs}h Window",
+            annotation_position="top right",
+        )
+        fig.update_layout(
+            xaxis=dict(title="Days After Flood Onset", automargin=True),
+            yaxis=dict(title="Cumulative Cost (₹ crore)", automargin=True),
+            height=340,
+            margin=dict(l=60, r=25, t=45, b=50),
+            font=dict(size=13),
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+        )
+        st.plotly_chart(fig, use_container_width=True, config={"displayModeBar": False})
 
 # --- TAB 3: PART A — AI PROOF & REAL VS ASSUMED ---
 with tab3:
     st.write("")
     st.subheader("AI Accuracy on an Unseen Flood (Sen1Floods11 Bolivia Test)")
-    st.dataframe(
+    st.table(
         pd.DataFrame([
             {
                 "Method": "Simple Threshold Baseline",
@@ -335,9 +439,7 @@ with tab3:
                 "F1 Score": f"{metrics['rf_test']['f1']*100:.1f}%",
                 "IoU": f"{metrics['rf_test']['iou']*100:.1f}%",
             },
-        ]),
-        use_container_width=True,
-        hide_index=True,
+        ])
     )
     st.caption(
         f"Assam unlabelled consistency (Baseline vs RF IoU): **{metrics['assam_baseline_vs_rf_iou']}** • "
@@ -379,7 +481,7 @@ with tab4:
         b1.metric(
             "Onboard Model Size",
             f"{o_rf['model_size_mb']} MB",
-            f"{b['size_reduction_pct']:.1f}% smaller than Ground RF",
+            f"{b['size_reduction_pct']:.1f}% smaller than Ground AI",
             delta_color="off",
         )
         b2.metric(
@@ -395,8 +497,9 @@ with tab4:
             delta_color="off",
         )
 
+        st.write("")
         st.subheader("Ground AI vs. Onboard-Edge AI (Unseen Bolivia Flood)")
-        st.dataframe(
+        st.table(
             pd.DataFrame([
                 {
                     "AI Version": "Ground AI (Full Model)",
@@ -414,9 +517,7 @@ with tab4:
                     "Accuracy": f"{o_rf['test_metrics']['accuracy']*100:.1f}%",
                     "Flood Score (F1)": f"{o_rf['test_metrics']['f1']*100:.1f}%",
                 },
-            ]),
-            use_container_width=True,
-            hide_index=True,
+            ])
         )
 
         st.success(
@@ -437,7 +538,7 @@ with tab4:
     st.divider()
     st.subheader("2. 3-Tier Aerospace Pipeline: Orbit → Stratosphere → Ground")
 
-    st.dataframe(
+    st.table(
         pd.DataFrame([
             {
                 "Tier": "1. Orbit (SAR Satellite + Onboard AI)",
@@ -457,9 +558,7 @@ with tab4:
                 "Coverage / Speed": "Targeted high-value farms flagged by Orbit/HAPS",
                 "Key Engineering Constraint": "Battery endurance, monsoon winds, and BVLOS airspace rules",
             },
-        ]),
-        use_container_width=True,
-        hide_index=True,
+        ])
     )
 
     st.divider()
